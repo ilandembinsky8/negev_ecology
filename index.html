@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="app.js" charset="utf-8"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+      /* Set the size of the div element that contains the map */
+      #map {
+        height: 800px;
+        /* The height is 400 pixels */
+        width: 100%;
+        /* The width is the width of the web page */
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <b>Search By Truck Number</b>
+      <input type="text" name="enter truck number" id="truckNumInput" value="">
+      <button id="search" onclick="getTruckByNumber()">Search</button>
+    </div>
+    <button type="button" name="button" onclick="getAllTrucks()">show all trucks</button><br>
+    <button type="button" name="button" onclick="getTruckAndContainer()">show truck and container details</button><br>
+
+    <div id="trucks"></div>
+    <div id="map"></div>
+    <script>
+        x = 30;
+        y = 35;
+    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiWOzJin0irzYKx8q8DQQSi9MP4hQ1P0c&callback=initMap&libraries=&v=weekly"
+      async></script>
+    <script>
+        makeLogin1();
+    </script>  
+  </body>
+</html>
